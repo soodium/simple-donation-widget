@@ -1,4 +1,4 @@
-## Synopsis
+## Overview
 
 A very simble donation widget in AngularJS without a payment or backend system.
 
