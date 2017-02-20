@@ -1,16 +1,21 @@
 'use strict';
 
-describe('myApp.view2 module', function() {
+describe('myApp.donation-widget module', function() {
+    beforeEach(module('myApp.donation-widget'));
 
-  beforeEach(module('myApp.view2'));
+    var $controller;
 
-  describe('view2 controller', function(){
-
-    it('should should have a project goal which is more than 0', inject(function($controller) {
-      //spec body
-      var donationWidgetController = $controller('donationWidgetController');
-      expect(view2Ctrl).toBeDefined();
+    beforeEach(inject(function(_$controller_) {
+        // The injector unwraps the underscores (_) from around the parameter names when matching
+        $controller = _$controller_;
     }));
 
-  });
+    describe('tests for the donation-widget module', function() {
+        it('should have a project goal of 500', function() {
+          var $scope = {};
+          var controller = $controller('donationWidgetController', { $scope: $scope });
+          expect($scope.project.donationGoal).toEqual(500);
+
+        });
+    });
 });

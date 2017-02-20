@@ -5,12 +5,22 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "karma start"
   },
   "author": "Vinit Sood (Netlight)",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.6.2",
+    "angular-mocks": "^1.6.2",
+    "angular-route": "^1.6.2",
     "connect": "^3.6.0",
     "serve-static": "^1.11.2"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.5.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-spec-reporter": "0.0.26"
   }
 }
