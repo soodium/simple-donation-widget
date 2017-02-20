@@ -6,9 +6,9 @@ describe('myApp.view2 module', function() {
 
   describe('view2 controller', function(){
 
-    it('should ....', inject(function($controller) {
+    it('should should have a project goal which is more than 0', inject(function($controller) {
       //spec body
-      var view2Ctrl = $controller('View2Ctrl');
+      var donationWidgetController = $controller('donationWidgetController');
       expect(view2Ctrl).toBeDefined();
     }));
 
