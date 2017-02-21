@@ -17,7 +17,7 @@
 
         <div ng-switch on="project.numberOfDonors">
             <p ng-switch-when="0"> Become the first donor by pledging any amount!</p>
-            <p ng-switch-default class="number-of-donors"> Join the <span style="font-weight:bold;">{{project.numberOfDonors}}</span> other donors who have donated <span>${{project.totalDonations}}</span></p>
+            <p ng-switch-default class="number-of-donors"> Join the <span>{{project.numberOfDonors}}</span> other donors who have donated <span>${{project.totalDonations}}</span></p>
         </div>
 
         <md-input-container>

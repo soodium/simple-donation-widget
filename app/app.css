@@ -39,3 +39,7 @@ hr.progressbarDone{
   color:rgb(63, 81, 181);
   font-weight: bold;
 }
+
+.number-of-donors span {
+  font-weight: bold;
+}
