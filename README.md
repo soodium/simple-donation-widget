@@ -1,6 +1,6 @@
 ## Overview
 
-A very simble donation widget in AngularJS without a payment or backend system.
+A very simple donation widget in AngularJS without a payment or backend system.
 
 ## Installation
 ```
