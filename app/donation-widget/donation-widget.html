@@ -1,13 +1,13 @@
 <!-- Donations widget -->
 <div class="donation-widget">
-    <img src="http://placehold.it/1000x666"> <br>
+    <img class="center" src="http://placehold.it/1000x666">
 
     <p class="product-headline">Imaginary product </p>
 
-    <div ng-switch on="project.isGoalReached">
-        <hr class="progressbarDone" ng-switch-when="true">
-        <md-progress-linear ng-switch-when="false" md-mode="determinate" value="{{project.progressProcent}}"></md-progress-linear>
-    </div>
+    <!-- <div ng-switch on="project.isGoalReached"> -->
+        <!-- <hr class="progressbarDone" > ng-switch-when="true" -->
+        <md-progress-linear  md-mode="determinate" value="{{project.progressProcent}}"></md-progress-linear> <!--  ng-switch-when="false" -->
+    <!-- </div> -->
 
     <form name="form" ng-submit="giveNow($scope.donation)" class="form-horizontal ng-dirty ng-valid ng-valid-required">
 

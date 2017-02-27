@@ -1,11 +1,14 @@
-img {
+img.center {
     max-width: 100%;
     max-height: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 form {
   border: 1px solid black;
   padding: 1em;
+  width: inherit;
 
 }
 
@@ -18,7 +21,7 @@ hr.progressbarDone{
 }
 
 .donation-widget {
-    max-width: 50em;
+    max-width: 750px;
     max-height: 100%;
 }
 
