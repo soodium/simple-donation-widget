@@ -2,29 +2,30 @@
 <div class="donation-widget">
     <img class="center" src="http://placehold.it/1000x666">
 
-    <p class="product-headline">Imaginary product </p>
+    <p class="product-headline">Imaginary product</p>
 
-    <div ng-switch on="project.isGoalReached">
+    <div ng-switch on="donationWidgetVm.project.isGoalReached">
         <hr ng-switch-when="true" class="progressbarDone"  >
-        <md-progress-linear ng-switch-when="false" md-mode="determinate" value="{{project.progressProcent}}"></md-progress-linear>
+        <md-progress-linear ng-switch-when="false" md-mode="determinate" value="{{donationWidgetVm.project.progressProcent}}"></md-progress-linear>
     </div>
 
-    <form name="form" ng-submit="giveNow($scope.donation)" class="form-horizontal ng-dirty ng-valid ng-valid-required">
+    <form name="form" ng-submit="donationWidgetVm.giveNow()" class="form-horizontal ng-dirty ng-valid ng-valid-required">
 
-        <md-tooltip ng-if="!project.isGoalReached" md-direction="top">${{project.donationGoal - project.totalDonations}} is still needed for this project</md-tooltip>
+        <md-tooltip ng-if="!donationWidgetVm.project.isGoalReached" md-direction="top">${{donationWidgetVm.project.donationGoal - donationWidgetVm.project.totalDonations}} is still needed for this project</md-tooltip>
 
         <p class="remaining-days-left"><span>Only 3 days left</span> to fund this project.</p>
 
-        <div ng-switch on="project.numberOfDonors">
+        <div ng-switch on="donationWidgetVm.project.numberOfDonors">
             <p ng-switch-when="0"> Become the first donor by pledging any amount!</p>
-            <p ng-switch-default class="number-of-donors"> Join the <span>{{project.numberOfDonors}}</span> other donors who have donated <span>${{project.totalDonations}}</span></p>
+            <p ng-switch-default class="number-of-donors"> Join the <span>{{donationWidgetVm.project.numberOfDonors}}</span> other donors who have donated <span>${{donationWidgetVm.project.totalDonations}}</span></p>
         </div>
 
         <md-input-container>
             <label>Pledge any amount</label>
-            <input type="number" class="ng-valid-required" required="" ng-model="$scope.donation" min="0">
+            <input type="number" class="ng-valid-required" required="" ng-model="donationWidgetVm.donation" min="0">
         </md-input-container>
 
         <md-button class="md-primary" type="submit" ng-disabled="form.$invalid">Give Now</md-button>
+
     </form>
 </div>

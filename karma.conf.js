@@ -18,8 +18,9 @@ module.exports = function(config) {
       './node_modules/angular/angular.js',
       './node_modules/angular-mocks/angular-mocks.js',
       './app/donation-widget/donation-widget_test.js',
-      './app/donation-widget/donation-widget.js',
-      './node_modules/angular-route/angular-route.js'
+      './app/donation-widget/donation-widget.js'
+
+
     ],
 
 
