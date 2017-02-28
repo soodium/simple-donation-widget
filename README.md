@@ -16,6 +16,7 @@ $ npm install
 Open the index.html file in the app folder (app/index.html) with Safari or Firefox.
 
 ### Chrome
+Chrome does not allow XmlHttpRequest to load local files when using the `file://` protocol. Therefore, the widget needs to be viewed via `http://`. 
 
 ```
 $ npm start
