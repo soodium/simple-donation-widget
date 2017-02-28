@@ -1,21 +1,29 @@
 'use strict';
 
-describe('myApp.donation-widget module', function() {
-    beforeEach(module('myApp.donation-widget'));
 
-    var $controller;
+describe('donationWidgetController', function() {
+beforeEach(module('myApp.donation-widget'));
 
-    beforeEach(inject(function(_$controller_) {
-        // The injector unwraps the underscores (_) from around the parameter names when matching
-        $controller = _$controller_;
-    }));
+var $controller;
 
-    describe('tests for the donation-widget module', function() {
-        it('should have a project goal of 500', function() {
-          var $scope = {};
-          var controller = $controller('donationWidgetController', { $scope: $scope });
-          expect($scope.project.donationGoal).toEqual(500);
+beforeEach(inject(function(_$controller_) {
+    // The injector unwraps the underscores (_) from around the parameter names when matching
+    $controller = _$controller_;
 
+}));
+
+describe('$scope.project', function() {
+    it('updates goal rechaed status when donation goal is reached', function() {
+        var $scope = {};
+        var controller = $controller('donationWidgetController', {
+            $scope: $scope
         });
+        
+        controller.donation = 501;
+        controller.giveNow();
+        expect(controller.project.donationGoal).toEqual(500);
+        expect(controller.project.isGoalReached).toEqual(true);
+
     });
+});
 });
