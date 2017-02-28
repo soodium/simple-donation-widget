@@ -1,7 +1,7 @@
 'use strict';
 
 
-describe('donationWidgetController', function() {
+describe('myApp.donation-widget', function() {
     beforeEach(module('myApp.donation-widget'));
 
     var $controller;
